@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+const employeesData = require('./data/carts');
+
+console.log(employeesData);
+
 app.set("view engine", "pug");
 
 app.use("/cart", function(request, response){
@@ -17,4 +21,4 @@ app.use("/", function(request, response){
 
     response.send("Главная страница");
 });
-app.listen(3000);
+app.listen(3001);
